@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LuxBid Register</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Clash+Display:wght@600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="register-body">
+<!-- ============================================
+     1. ANNOUNCEMENT BAR
+     ============================================ -->
+<div class="announcement-bar">
+  <div class="marquee-wrapper">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="marquee-item">ðŸš€ GRAND LAUNCH: Next â‚¬50,000 Mega Competition Draws in... &nbsp;â¬¥&nbsp; <span>LIMITED SEATS</span> â€” Only 147 slots remaining &nbsp;â¬¥&nbsp; ðŸ† Last Winner: <span>@phantom_kai</span> took home $48,200 &nbsp;â¬¥&nbsp; New auction: Lamborghini HuracÃ¡n EVO â€¢ Starting bid $12,000 &nbsp;â¬¥&nbsp; ðŸ”¥ <span>FLASH ROUND</span> starts in 30 minutes &nbsp;â¬¥&nbsp;</div>
+      <div class="marquee-item">ðŸš€ GRAND LAUNCH: Next â‚¬50,000 Mega Competition Draws in... &nbsp;â¬¥&nbsp; <span>LIMITED SEATS</span> â€” Only 147 slots remaining &nbsp;â¬¥&nbsp; ðŸ† Last Winner: <span>@phantom_kai</span> took home $48,200 &nbsp;â¬¥&nbsp; New auction: Lamborghini HuracÃ¡n EVO â€¢ Starting bid $12,000 &nbsp;â¬¥&nbsp; ðŸ”¥ <span>FLASH ROUND</span> starts in 30 minutes &nbsp;â¬¥&nbsp;</div>
+    </div>
+  </div>
+  <div class="countdown-widget">
+    <span class="countdown-label">Draws in</span>
+    <div class="countdown-timer">
+      <div class="cd-unit"><span class="cd-num" id="cd-h">08</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-m">24</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-s">17</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     2. HEADER
+     ============================================ -->
+<header class="header">
+  <a href="#" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="19,2 36,12 36,26 19,36 2,26 2,12" fill="none" stroke="url(#logoGrad)" stroke-width="1.5"/>
+        <polygon points="19,9 29,15 29,23 19,29 9,23 9,15" fill="url(#logoFill)" opacity="0.4"/>
+        <polygon points="19,14 24,17 24,21 19,24 14,21 14,17" fill="url(#logoAccent)"/>
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="0" x2="38" y2="38">
+            <stop offset="0%" stop-color="#9945FF"/>
+            <stop offset="50%" stop-color="#00FFFF"/>
+            <stop offset="100%" stop-color="#FF3366"/>
+          </linearGradient>
+          <linearGradient id="logoFill" x1="0" y1="0" x2="38" y2="38">
+            <stop offset="0%" stop-color="#9945FF" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#00FFFF" stop-opacity="0.2"/>
+          </linearGradient>
+          <linearGradient id="logoAccent" x1="0" y1="0" x2="38" y2="38">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#9945FF"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <span class="logo-text">LUXBID</span>
+  </a>
+
+  <nav class="nav">
+    <a href="#" class="nav-link">Auctions</a>
+    <a href="#" class="nav-link">Collections</a>
+    <a href="#" class="nav-link">Rankings</a>
+    <a href="#" class="nav-link">Drops</a>
+    <a href="#" class="nav-link">Community</a>
+  </nav>
+
+  <div class="header-right">
+    <button class="btn-connect">
+      <div class="web3-icons">
+        <div class="w3-icon mm">ðŸ¦Š</div>
+        <div class="w3-icon ph">ðŸ‘»</div>
+      </div>
+      Connect Wallet
+    </button>
+    <button class="btn-profile">K</button>
+  </div>
+</header>
+
+<main class="register-page">
+  <section class="register-grid" aria-labelledby="register-title">
+    <div class="register-feature-panel">
+      <div class="register-wireframe" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p class="register-badge">Verified Access Layer</p>
+      <h1 id="register-title">Join the Next Generation Marketplace.</h1>
+      <p class="register-feature-copy">Create your LuxBid profile to enter premium auctions, track prize flows, and unlock member-only competition drops.</p>
+    </div>
+
+    <div class="register-form-panel">
+      <div class="register-heading">
+        <p class="register-kicker">Create Account</p>
+        <h2>Register</h2>
+        <p>Secure your marketplace identity and prepare your account for verified bidding.</p>
+      </div>
+
+      <form class="register-form" action="#" method="post">
+        <div class="register-name-grid">
+          <label class="register-field">
+            <span>First Name</span>
+            <input type="text" name="first-name" placeholder="Kai" autocomplete="given-name" required />
+          </label>
+
+          <label class="register-field">
+            <span>Last Name</span>
+            <input type="text" name="last-name" placeholder="Morgan" autocomplete="family-name" required />
+          </label>
+        </div>
+
+        <label class="register-field">
+          <span>Username</span>
+          <input type="text" name="username" placeholder="@luxcollector" autocomplete="username" required />
+        </label>
+
+        <label class="register-field">
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@domain.com" autocomplete="email" required />
+        </label>
+
+        <label class="register-field">
+          <span>Password</span>
+          <input type="password" name="password" placeholder="Create secure password" autocomplete="new-password" required />
+        </label>
+
+        <div class="password-meter" aria-label="Password strength indicator">
+          <span class="meter-segment weak"></span>
+          <span class="meter-segment strong"></span>
+          <span class="meter-text">Strength: initialize secure phrase</span>
+        </div>
+
+        <button class="register-submit" type="submit">Create Account</button>
+      </form>
+
+      <p class="register-login">Already registered? <a href="login.html">Login</a></p>
+    </div>
+  </section>
+</main>
+
+<!-- ============================================
+     21. FOOTER
+     ============================================ -->
+<footer class="corporate-footer">
+  <div class="footer-grid">
+    <div>
+      <a href="#" class="logo"><div class="logo-mark"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="19,2 36,12 36,26 19,36 2,26 2,12" fill="none" stroke="#00FFFF" stroke-width="1.5"/><polygon points="19,9 29,15 29,23 19,29 9,23 9,15" fill="#9945FF" opacity="0.35"/></svg></div><span class="logo-text">LUXBID</span></a>
+      <p class="footer-brand-copy">A premium Web3 auction and competition platform for authenticated luxury assets, transparent draws, and verified settlement.</p>
+      <div class="social-row"><a class="social-btn x" href="#">X</a><a class="social-btn discord" href="#">D</a><a class="social-btn telegram" href="#">T</a></div>
+    </div>
+    <div class="footer-col"><h4>Platform</h4><a href="#">Auctions</a><a href="#">Competitions</a><a href="#">Winners</a><a href="#">VIP Program</a></div>
+    <div class="footer-col"><h4>Resources</h4><a href="#">Strategy Guides</a><a href="#">Verification</a><a href="#">Security</a><a href="#">Referral Program</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Contact</a></div>
+    <div class="footer-col"><h4>Legal</h4><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Risk Disclosure</a><a href="#">Cookie Policy</a></div>
+  </div>
+  <div class="footer-bottom"><div>Â© 2026 LuxBid Platform. All rights reserved.</div><div class="risk-copy">Risk disclosure: Auctions, raffles, and crypto-settled competitions involve financial risk and may not be available in all jurisdictions. Participate only where permitted and only with funds you can afford to lose.</div></div>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,939 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LuxBid â€” Bid. Compete. Win.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Clash+Display:wght@600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============================================
+     1. ANNOUNCEMENT BAR
+     ============================================ -->
+<div class="announcement-bar">
+  <div class="marquee-wrapper">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="marquee-item">ðŸš€ GRAND LAUNCH: Next â‚¬50,000 Mega Competition Draws in... &nbsp;â¬¥&nbsp; <span>LIMITED SEATS</span> â€” Only 147 slots remaining &nbsp;â¬¥&nbsp; ðŸ† Last Winner: <span>@phantom_kai</span> took home $48,200 &nbsp;â¬¥&nbsp; New auction: Lamborghini HuracÃ¡n EVO â€¢ Starting bid $12,000 &nbsp;â¬¥&nbsp; ðŸ”¥ <span>FLASH ROUND</span> starts in 30 minutes &nbsp;â¬¥&nbsp;</div>
+      <div class="marquee-item">ðŸš€ GRAND LAUNCH: Next â‚¬50,000 Mega Competition Draws in... &nbsp;â¬¥&nbsp; <span>LIMITED SEATS</span> â€” Only 147 slots remaining &nbsp;â¬¥&nbsp; ðŸ† Last Winner: <span>@phantom_kai</span> took home $48,200 &nbsp;â¬¥&nbsp; New auction: Lamborghini HuracÃ¡n EVO â€¢ Starting bid $12,000 &nbsp;â¬¥&nbsp; ðŸ”¥ <span>FLASH ROUND</span> starts in 30 minutes &nbsp;â¬¥&nbsp;</div>
+    </div>
+  </div>
+  <div class="countdown-widget">
+    <span class="countdown-label">Draws in</span>
+    <div class="countdown-timer">
+      <div class="cd-unit"><span class="cd-num" id="cd-h">08</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-m">24</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-s">17</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     2. HEADER
+     ============================================ -->
+<header class="header">
+  <a href="#" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="19,2 36,12 36,26 19,36 2,26 2,12" fill="none" stroke="url(#logoGrad)" stroke-width="1.5"/>
+        <polygon points="19,9 29,15 29,23 19,29 9,23 9,15" fill="url(#logoFill)" opacity="0.4"/>
+        <polygon points="19,14 24,17 24,21 19,24 14,21 14,17" fill="url(#logoAccent)"/>
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="0" x2="38" y2="38">
+            <stop offset="0%" stop-color="#9945FF"/>
+            <stop offset="50%" stop-color="#00FFFF"/>
+            <stop offset="100%" stop-color="#FF3366"/>
+          </linearGradient>
+          <linearGradient id="logoFill" x1="0" y1="0" x2="38" y2="38">
+            <stop offset="0%" stop-color="#9945FF" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#00FFFF" stop-opacity="0.2"/>
+          </linearGradient>
+          <linearGradient id="logoAccent" x1="0" y1="0" x2="38" y2="38">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#9945FF"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <span class="logo-text">LUXBID</span>
+  </a>
+
+  <nav class="nav">
+    <a href="#" class="nav-link">Auctions</a>
+    <a href="#" class="nav-link">Collections</a>
+    <a href="#" class="nav-link">Rankings</a>
+    <a href="#" class="nav-link">Drops</a>
+    <a href="#" class="nav-link">Community</a>
+  </nav>
+
+  <div class="header-right">
+    <button class="btn-connect">
+      <div class="web3-icons">
+        <div class="w3-icon mm">ðŸ¦Š</div>
+        <div class="w3-icon ph">ðŸ‘»</div>
+      </div>
+      Connect Wallet
+    </button>
+    <button class="btn-profile">K</button>
+  </div>
+</header>
+
+<!-- ============================================
+     3. HERO
+     ============================================ -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="mesh-grid"></div>
+    <div class="glow-purple"></div>
+    <div class="glow-cyan"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Live Platform â€” 3,247 Active Bidders
+      </div>
+      <h1 class="hero-headline">
+        <span class="hl-plain">Bid.</span>
+        <span class="hl-gradient">Compete.</span>
+        <span class="hl-plain">Win.</span>
+      </h1>
+      <p class="hero-sub">The world's most exclusive real-time auction platform for luxury assets â€” watches, supercars, art & rare collectibles. Zero compromise. Maximum thrill.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary">ðŸ”¥ Start Bidding</button>
+        <button class="btn-secondary">â†’ Explore Auctions</button>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="car-stage">
+        <!-- Floating bid cards -->
+        <div class="float-card fc-1">
+          <div class="fc-label">Current Bid</div>
+          <div class="fc-value live" id="hero-bid">$187,400</div>
+          <div class="fc-change">â†‘ +$2,200 last 60s</div>
+        </div>
+
+        <div class="float-card fc-2">
+          <div class="fc-label">Time Left</div>
+          <div class="fc-value" id="hero-timer">04:32:18</div>
+          <div class="fc-ticker">Closes tonight</div>
+        </div>
+
+        <div class="float-card fc-3">
+          <div class="fc-label">Total Bids</div>
+          <div class="fc-value green">1,284</div>
+          <div class="fc-change">â†‘ 47 this minute</div>
+        </div>
+
+        <div class="float-card fc-4">
+          <div class="fc-label">Top Bidder</div>
+          <div class="fc-value" style="font-size:14px">@phantom_kai</div>
+          <div class="fc-ticker">ðŸ† Winning</div>
+        </div>
+
+        <!-- SVG Car -->
+        <svg class="car-3d" id="heroCar" viewBox="0 0 480 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Car body shadow -->
+          <ellipse cx="240" cy="205" rx="200" ry="12" fill="rgba(0,0,0,0.5)"/>
+          <!-- Main body bottom -->
+          <path d="M 60 160 L 60 145 Q 62 135 80 132 L 400 132 Q 418 135 420 145 L 420 160 Z" fill="url(#carBody)"/>
+          <!-- Main body top -->
+          <path d="M 80 132 Q 100 90 140 72 L 200 62 Q 230 56 260 56 L 300 58 Q 340 64 370 82 Q 395 96 410 115 Q 420 125 420 132 Z" fill="url(#carRoof)"/>
+          <!-- Windshield -->
+          <path d="M 160 130 Q 165 85 200 70 L 270 66 Q 300 68 320 82 Q 340 95 348 130 Z" fill="url(#windshield)" opacity="0.7"/>
+          <!-- Rear window -->
+          <path d="M 352 130 Q 362 100 380 90 L 408 100 Q 415 110 418 130 Z" fill="url(#windshield)" opacity="0.5"/>
+          <!-- Hood details -->
+          <path d="M 80 132 Q 90 128 110 128 L 155 130" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
+          <!-- Door line -->
+          <path d="M 165 130 L 165 158" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <path d="M 290 130 L 290 158" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <!-- Chrome accent line -->
+          <path d="M 82 140 L 418 140" stroke="url(#chromeAccent)" stroke-width="1.5" opacity="0.5"/>
+          <!-- Spoiler -->
+          <path d="M 390 118 L 430 115 Q 435 116 430 120 L 390 123 Z" fill="url(#carBody)"/>
+          <!-- Wheels -->
+          <circle cx="140" cy="165" r="32" fill="#0a0a18" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <circle cx="140" cy="165" r="22" fill="#111125" stroke="rgba(153,69,255,0.4)" stroke-width="1"/>
+          <circle cx="140" cy="165" r="12" fill="url(#wheelHub)"/>
+          <!-- Wheel spokes -->
+          <line x1="140" y1="143" x2="140" y2="152" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="140" y1="178" x2="140" y2="187" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="118" y1="165" x2="127" y2="165" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="153" y1="165" x2="162" y2="165" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="124" y1="149" x2="131" y2="156" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="149" y1="174" x2="156" y2="181" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="124" y1="181" x2="131" y2="174" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="149" y1="156" x2="156" y2="149" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+
+          <circle cx="340" cy="165" r="32" fill="#0a0a18" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <circle cx="340" cy="165" r="22" fill="#111125" stroke="rgba(153,69,255,0.4)" stroke-width="1"/>
+          <circle cx="340" cy="165" r="12" fill="url(#wheelHub)"/>
+          <line x1="340" y1="143" x2="340" y2="152" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="340" y1="178" x2="340" y2="187" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="318" y1="165" x2="327" y2="165" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="353" y1="165" x2="362" y2="165" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="324" y1="149" x2="331" y2="156" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="349" y1="174" x2="356" y2="181" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="324" y1="181" x2="331" y2="174" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="349" y1="156" x2="356" y2="149" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+
+          <!-- Headlights -->
+          <path d="M 62 138 Q 68 130 80 128 L 92 129 Q 84 134 80 142 Z" fill="#FF3366" opacity="0.8"/>
+          <path d="M 418 138 Q 412 130 400 128 L 388 129 Q 396 134 400 142 Z" fill="#FF3366" opacity="0.9"/>
+          <!-- Grill -->
+          <rect x="62" y="145" width="18" height="10" rx="2" fill="rgba(0,0,0,0.8)" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+
+          <defs>
+            <linearGradient id="carBody" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2a2a4a"/>
+              <stop offset="100%" stop-color="#0d0d22"/>
+            </linearGradient>
+            <linearGradient id="carRoof" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1a1a35"/>
+              <stop offset="60%" stop-color="#15152d"/>
+              <stop offset="100%" stop-color="#0d0d22"/>
+            </linearGradient>
+            <linearGradient id="windshield" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="rgba(100,160,255,0.3)"/>
+              <stop offset="100%" stop-color="rgba(153,69,255,0.15)"/>
+            </linearGradient>
+            <linearGradient id="chromeAccent" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="transparent"/>
+              <stop offset="20%" stop-color="#9945FF"/>
+              <stop offset="50%" stop-color="#ffffff"/>
+              <stop offset="80%" stop-color="#00FFFF"/>
+              <stop offset="100%" stop-color="transparent"/>
+            </linearGradient>
+            <radialGradient id="wheelHub">
+              <stop offset="0%" stop-color="#3a3a5a"/>
+              <stop offset="100%" stop-color="#1a1a30"/>
+            </radialGradient>
+          </defs>
+        </svg>
+        <div class="car-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     4. STATISTICS â€” BENTO GRID
+     ============================================ -->
+<section class="stats-section">
+  <div class="section-label">Platform Metrics</div>
+  <h2 class="section-title">Numbers that<br>speak for themselves</h2>
+
+  <div class="bento-grid" id="bentoGrid">
+    <!-- Card 1 -->
+    <div class="bento-card" data-color="255,51,102">
+      <div class="glow-border"></div>
+      <div class="bento-card-inner">
+        <div class="stat-label">Total Volume Traded</div>
+        <div class="stat-number pink" data-target="42000000" data-prefix="$" data-suffix="M+">$0</div>
+        <div class="sparkline-wrap">
+          <svg class="sparkline" viewBox="0 0 160 36" preserveAspectRatio="none">
+            <polyline points="0,30 20,26 35,28 50,18 65,20 80,12 95,15 110,8 125,10 145,4 160,2" fill="none" stroke="#39FF14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="0,36 0,30 20,26 35,28 50,18 65,20 80,12 95,15 110,8 125,10 145,4 160,2 160,36" fill="url(#sparkGradPink)" opacity="0.15"/>
+            <defs>
+              <linearGradient id="sparkGradPink" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#39FF14"/>
+                <stop offset="100%" stop-color="transparent"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="stat-trend">â†‘ +14.2% this month</div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bento-card" data-color="0,255,255">
+      <div class="glow-border"></div>
+      <div class="bento-card-inner">
+        <div class="stat-label">Active Bidders</div>
+        <div class="stat-number cyan" data-target="184000" data-prefix="" data-suffix="K+">0</div>
+        <div class="sparkline-wrap">
+          <svg class="sparkline" viewBox="0 0 160 36" preserveAspectRatio="none">
+            <polyline points="0,28 20,22 35,24 50,16 65,18 80,10 95,8 110,12 125,6 145,4 160,3" fill="none" stroke="#00FFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="0,36 0,28 20,22 35,24 50,16 65,18 80,10 95,8 110,12 125,6 145,4 160,3 160,36" fill="url(#sparkGradCyan)" opacity="0.15"/>
+            <defs>
+              <linearGradient id="sparkGradCyan" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00FFFF"/>
+                <stop offset="100%" stop-color="transparent"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="stat-trend">â†‘ +8.7% this week</div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bento-card" data-color="153,69,255">
+      <div class="glow-border"></div>
+      <div class="bento-card-inner">
+        <div class="stat-label">Auctions Won</div>
+        <div class="stat-number purple" data-target="96800" data-prefix="" data-suffix="K">0</div>
+        <div class="sparkline-wrap">
+          <svg class="sparkline" viewBox="0 0 160 36" preserveAspectRatio="none">
+            <polyline points="0,32 20,28 35,22 50,24 65,16 80,14 95,18 110,10 125,8 145,5 160,3" fill="none" stroke="#9945FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="0,36 0,32 20,28 35,22 50,24 65,16 80,14 95,18 110,10 125,8 145,5 160,3 160,36" fill="url(#sparkGradPurple)" opacity="0.15"/>
+            <defs>
+              <linearGradient id="sparkGradPurple" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#9945FF"/>
+                <stop offset="100%" stop-color="transparent"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="stat-trend">â†‘ +22.1% this month</div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bento-card" data-color="57,255,20">
+      <div class="glow-border"></div>
+      <div class="bento-card-inner">
+        <div class="stat-label">Record Single Bid</div>
+        <div class="stat-number green" data-target="2100000" data-prefix="$" data-suffix="M">$0</div>
+        <div class="sparkline-wrap">
+          <svg class="sparkline" viewBox="0 0 160 36" preserveAspectRatio="none">
+            <polyline points="0,34 20,30 35,26 50,28 65,20 80,18 95,14 110,16 125,8 145,4 160,1" fill="none" stroke="#39FF14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="0,36 0,34 20,30 35,26 50,28 65,20 80,18 95,14 110,16 125,8 145,4 160,1 160,36" fill="url(#sparkGradGreen)" opacity="0.15"/>
+            <defs>
+              <linearGradient id="sparkGradGreen" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#39FF14"/>
+                <stop offset="100%" stop-color="transparent"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="stat-trend">1962 Ferrari 250 GTO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     5. LIVE AUCTIONS
+     ============================================ -->
+<section class="auctions-section">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Real-Time Bidding</div>
+      <h2 class="section-title">Live Auctions</h2>
+    </div>
+    <a href="#" class="view-all-link">View all auctions â†’</a>
+  </div>
+
+  <div class="auction-grid">
+    <!-- Card 1 -->
+    <div class="auction-card card-1">
+      <div class="card-image-wrap">
+        <div class="card-img-placeholder">ðŸŽï¸</div>
+        <div class="live-badge"><div class="live-dot"></div><span class="live-text">LIVE</span></div>
+        <div class="card-category">Supercar</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Lamborghini HuracÃ¡n EVO</div>
+        <div class="card-creator"><div class="creator-avatar">L</div> Listed by @luxdealer_eu</div>
+        <div class="card-bid-section" id="bid-1">
+          <div class="bid-col">
+            <div class="bid-meta-label">Current Bid</div>
+            <div class="bid-amount" id="amount-1">$187,400</div>
+          </div>
+          <div class="bid-timer-wrap">
+            <div class="timer-label">Ends In</div>
+            <div class="bid-timer" id="timer-1">02:14:38</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn-bid">Place Bid</button>
+          <button class="btn-watch">â™¡</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="auction-card card-2">
+      <div class="card-image-wrap">
+        <div class="card-img-placeholder">âŒš</div>
+        <div class="live-badge"><div class="live-dot"></div><span class="live-text">LIVE</span></div>
+        <div class="card-category">Horology</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Patek Philippe Nautilus 5711</div>
+        <div class="card-creator"><div class="creator-avatar">W</div> Listed by @watchvault_hk</div>
+        <div class="card-bid-section" id="bid-2">
+          <div class="bid-col">
+            <div class="bid-meta-label">Current Bid</div>
+            <div class="bid-amount" id="amount-2">$94,200</div>
+          </div>
+          <div class="bid-timer-wrap">
+            <div class="timer-label">Ends In</div>
+            <div class="bid-timer urgent" id="timer-2">00:04:12</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn-bid">Place Bid</button>
+          <button class="btn-watch">â™¡</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="auction-card card-3">
+      <div class="card-image-wrap">
+        <div class="card-img-placeholder">ðŸŽ¨</div>
+        <div class="live-badge"><div class="live-dot"></div><span class="live-text">LIVE</span></div>
+        <div class="card-category">Fine Art</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Banksy â€” "Love is in the Bin"</div>
+        <div class="card-creator"><div class="creator-avatar">A</div> Listed by @arthaus_berlin</div>
+        <div class="card-bid-section" id="bid-3">
+          <div class="bid-col">
+            <div class="bid-meta-label">Current Bid</div>
+            <div class="bid-amount" id="amount-3">$1,240,000</div>
+          </div>
+          <div class="bid-timer-wrap">
+            <div class="timer-label">Ends In</div>
+            <div class="bid-timer" id="timer-3">11:58:02</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn-bid">Place Bid</button>
+          <button class="btn-watch">â™¡</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     6. COMPETITIONS & RAFFLES
+     ============================================ -->
+<section class="competitions-section">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Competitions & Raffles</div>
+      <h2 class="section-title">Luxury prizes, live odds</h2>
+    </div>
+    <a href="#" class="view-all-link">View all competitions -></a>
+  </div>
+
+  <div class="competition-grid">
+    <article class="competition-card">
+      <div class="prize-visual"><div class="prize-icon">ðŸŽï¸</div></div>
+      <div class="competition-body">
+        <div class="competition-kicker">Grand Draw / 184 left</div>
+        <h3 class="competition-title">McLaren Artura Hybrid</h3>
+        <div class="ticket-progress">
+          <div class="ticket-bar"><div class="ticket-fill" style="--fill: 76%"></div></div>
+          <div class="ticket-row"><span class="ticket-meta">3,824 / 5,000 tickets</span><span class="ticket-meta">76%</span></div>
+        </div>
+        <div class="ticket-actions">
+          <div class="ticket-stepper" data-ticket-stepper><button type="button" data-ticket-minus>-</button><span class="ticket-count">2x</span><button type="button" data-ticket-plus>+</button></div>
+          <button class="btn-ticket">Buy Tickets</button>
+        </div>
+      </div>
+    </article>
+    <article class="competition-card">
+      <div class="prize-visual"><div class="prize-icon">âŒš</div></div>
+      <div class="competition-body">
+        <div class="competition-kicker">Flash Raffle / 62 left</div>
+        <h3 class="competition-title">Audemars Piguet Royal Oak</h3>
+        <div class="ticket-progress">
+          <div class="ticket-bar"><div class="ticket-fill" style="--fill: 88%"></div></div>
+          <div class="ticket-row"><span class="ticket-meta">1,584 / 1,800 tickets</span><span class="ticket-meta">88%</span></div>
+        </div>
+        <div class="ticket-actions">
+          <div class="ticket-stepper" data-ticket-stepper><button type="button" data-ticket-minus>-</button><span class="ticket-count">4x</span><button type="button" data-ticket-plus>+</button></div>
+          <button class="btn-ticket">Buy Tickets</button>
+        </div>
+      </div>
+    </article>
+    <article class="competition-card">
+      <div class="prize-visual"><div class="prize-icon">ðŸ’Ž</div></div>
+      <div class="competition-body">
+        <div class="competition-kicker">Vault Drop / 241 left</div>
+        <h3 class="competition-title">Diamond Vault Mystery Box</h3>
+        <div class="ticket-progress">
+          <div class="ticket-bar"><div class="ticket-fill" style="--fill: 63%"></div></div>
+          <div class="ticket-row"><span class="ticket-meta">2,520 / 4,000 tickets</span><span class="ticket-meta">63%</span></div>
+        </div>
+        <div class="ticket-actions">
+          <div class="ticket-stepper" data-ticket-stepper><button type="button" data-ticket-minus>-</button><span class="ticket-count">1x</span><button type="button" data-ticket-plus>+</button></div>
+          <button class="btn-ticket">Buy Tickets</button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     7. HOW IT WORKS
+     ============================================ -->
+<section class="how-section" id="howTimeline">
+  <div class="section-label">How It Works</div>
+  <h2 class="section-title">Three steps from wallet to win</h2>
+  <div class="timeline-shell">
+    <div class="timeline-line"></div>
+    <div class="timeline-grid">
+      <article class="timeline-step">
+        <div class="step-node">01</div>
+        <div class="step-icon"><div class="wallet-3d"></div></div>
+        <div class="timeline-meta">Connect / Verify</div>
+        <h3 class="timeline-title">Link your crypto wallet</h3>
+        <p class="timeline-copy">Use your preferred Web3 wallet to sign in, verify ownership, and keep every auction action tied to your address.</p>
+      </article>
+      <article class="timeline-step">
+        <div class="step-node">02</div>
+        <div class="step-icon"><div class="split-gavel"></div></div>
+        <div class="timeline-meta">Bid / Enter</div>
+        <h3 class="timeline-title">Bid or multiply tickets</h3>
+        <p class="timeline-copy">Choose a live auction or raffle, review transparent odds, then place a bid or buy weighted ticket entries.</p>
+      </article>
+      <article class="timeline-step">
+        <div class="step-node">03</div>
+        <div class="step-icon"><div class="prize-crate"></div></div>
+        <div class="timeline-meta">Settle / Deliver</div>
+        <h3 class="timeline-title">Claim verified prizes</h3>
+        <p class="timeline-copy">Winners receive automated settlement, blockchain verification, and concierge delivery for luxury assets.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     8. WHY CHOOSE US
+     ============================================ -->
+<section class="why-section">
+  <div class="section-label">Why Choose Us</div>
+  <h2 class="section-title">Trust-grade infrastructure<br>with Web3 velocity</h2>
+  <div class="why-grid">
+    <article class="why-card">
+      <svg class="why-icon" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="whyStroke" x1="0" y1="0" x2="64" y2="64"><stop stop-color="#00FFFF"/><stop offset="1" stop-color="#9945FF"/></linearGradient></defs><path d="M14 34 C20 18, 44 18, 50 34" /><path d="M18 36 L32 48 L46 36" /><circle cx="32" cy="30" r="8" /></svg>
+      <div class="why-meta">Cryptographic draws</div>
+      <h3 class="why-title"><span>Provably fair</span> outcomes</h3>
+      <p class="why-copy">Every draw is anchored to verifiable randomness, so ticket selection remains auditable from entry to settlement.</p>
+    </article>
+    <article class="why-card">
+      <svg class="why-icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="13" y="18" width="38" height="28" rx="8" /><path d="M20 32 H44" /><path d="M34 24 L44 32 L34 40" /></svg>
+      <div class="why-meta">Automated settlement</div>
+      <h3 class="why-title"><span>Instant</span> payouts</h3>
+      <p class="why-copy">Smart-contract routed rewards remove slow manual handling and keep post-win settlement clean and traceable.</p>
+    </article>
+    <article class="why-card">
+      <svg class="why-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 48 V22 L32 14 L46 22 V48" /><path d="M24 48 V30 H40 V48" /><path d="M28 22 H36" /></svg>
+      <div class="why-meta">Luxury custody</div>
+      <h3 class="why-title">Insured asset vaults</h3>
+      <p class="why-copy">High-value items are authenticated, insured, and held with professional custody partners before listing.</p>
+    </article>
+    <article class="why-card">
+      <svg class="why-icon" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="18" /><path d="M32 14 V50" /><path d="M14 32 H50" /><path d="M20 22 C28 28, 36 28, 44 22" /><path d="M20 42 C28 36, 36 36, 44 42" /></svg>
+      <div class="why-meta">Global access</div>
+      <h3 class="why-title">Multi-network entries</h3>
+      <p class="why-copy">Participate across leading chains with low friction wallet flows and consistent on-chain verification.</p>
+    </article>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     9. CRYPTO NETWORKS
+     ============================================ -->
+<section class="networks-section">
+  <div class="networks-inner">
+    <div class="section-label">Crypto Networks</div>
+    <div class="network-label">Supported settlement rails</div>
+  </div>
+  <div class="network-ticker">
+    <div class="network-track">
+      <div class="network-logo"><svg viewBox="0 0 48 48"><path fill="currentColor" d="M24 4 L12 25 L24 32 L36 25 Z M12 28 L24 44 L36 28 L24 35 Z"/></svg><span>Ethereum</span></div>
+      <div class="network-logo"><svg viewBox="0 0 48 48"><path fill="currentColor" d="M12 14 H38 L33 20 H7 Z M15 22 H41 L36 28 H10 Z M12 30 H38 L33 36 H7 Z"/></svg><span>Solana</span></div>
+      <div class="network-logo"><svg viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M18 16 L28 10 L38 16 V28 L28 34 L18 28 Z M10 22 L18 16 M10 22 V34 L20 40 L28 34"/></svg><span>Polygon</span></div>
+      <div class="network-logo"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="currentColor"/><circle cx="30" cy="24" r="11" fill="#08080f"/></svg><span>Base</span></div>
+      <div class="network-logo"><svg viewBox="0 0 48 48"><path fill="currentColor" d="M24 4 L12 25 L24 32 L36 25 Z M12 28 L24 44 L36 28 L24 35 Z"/></svg><span>Ethereum</span></div>
+      <div class="network-logo"><svg viewBox="0 0 48 48"><path fill="currentColor" d="M12 14 H38 L33 20 H7 Z M15 22 H41 L36 28 H10 Z M12 30 H38 L33 36 H7 Z"/></svg><span>Solana</span></div>
+      <div class="network-logo"><svg viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M18 16 L28 10 L38 16 V28 L28 34 L18 28 Z M10 22 L18 16 M10 22 V34 L20 40 L28 34"/></svg><span>Polygon</span></div>
+      <div class="network-logo"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="currentColor"/><circle cx="30" cy="24" r="11" fill="#08080f"/></svg><span>Base</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     10. FEATURED WINNER
+     ============================================ -->
+<section class="winner-section">
+  <div class="winner-layout">
+    <div class="winner-portrait">
+      <div class="metal-border"></div>
+      <div class="portrait-frame">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=85" alt="Featured LuxBid winner portrait">
+      </div>
+    </div>
+    <div class="winner-copy">
+      <div class="section-label">Featured Winner</div>
+      <blockquote class="winner-quote">"The verification was instant. I watched the draw settle on-chain, then LuxBid handled delivery like a private client desk."</blockquote>
+      <div class="winner-name">Maya Chen / Royal Oak raffle winner</div>
+      <div class="winner-meta">Prize value: $92,400 / Settled on Ethereum</div>
+      <div class="verification-ticket">
+        <div>
+          <div class="winner-meta">Verification Ticket</div>
+          <div class="hash-value">0x9f3A...7c21D8bE44f92A19C0e8B62aC55E13F9a80D</div>
+        </div>
+        <a class="verify-link" href="https://etherscan.io/" target="_blank" rel="noreferrer">Verify on Blockchain <span>â†—</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     11. RECENT WINNERS
+     ============================================ -->
+<section class="recent-section">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Recent Winners</div>
+      <h2 class="section-title">Live prize dispatch feed</h2>
+    </div>
+    <div class="winner-meta">Auto-refreshing every few seconds</div>
+  </div>
+
+  <div class="winner-table" id="winnerFeed">
+    <div class="winner-row">
+      <div class="winner-user"><div class="winner-avatar">K</div><div><div class="masked-name">@kai***17</div><div class="winner-time">18 seconds ago</div></div></div>
+      <div class="winner-item"><div class="winner-thumb">âŒš</div><div><div class="item-name">Rolex Daytona Panda</div><div class="item-meta">Ticket #88421</div></div></div>
+      <div class="win-value-badge">Spent $5 to win $42,000</div>
+      <div class="escrow-badge">Dispatched via Escrow</div>
+    </div>
+    <div class="winner-row">
+      <div class="winner-user"><div class="winner-avatar">M</div><div><div class="masked-name">@maya***09</div><div class="winner-time">2 minutes ago</div></div></div>
+      <div class="winner-item"><div class="winner-thumb">ðŸ’Ž</div><div><div class="item-name">Diamond Vault Box</div><div class="item-meta">Ticket #77208</div></div></div>
+      <div class="win-value-badge">Spent $12 to win $9,800</div>
+      <div class="escrow-badge">Dispatched via Escrow</div>
+    </div>
+    <div class="winner-row">
+      <div class="winner-user"><div class="winner-avatar">R</div><div><div class="masked-name">@ryan***44</div><div class="winner-time">5 minutes ago</div></div></div>
+      <div class="winner-item"><div class="winner-thumb">ðŸŽï¸</div><div><div class="item-name">Track Day Supercar Pass</div><div class="item-meta">Ticket #60114</div></div></div>
+      <div class="win-value-badge">Spent $5 to win $2,000</div>
+      <div class="escrow-badge">Dispatched via Escrow</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     12. VIP PROGRAM
+     ============================================ -->
+<section class="vip-section">
+  <div class="section-label">VIP Program</div>
+  <h2 class="section-title">Luxury tiers for serious collectors</h2>
+  <div class="vip-grid">
+    <article class="vip-card bronze">
+      <div class="foil-logo">L</div>
+      <div class="vip-tier">Tier 01</div>
+      <h3 class="vip-name">Bronze</h3>
+      <ul class="vip-perks">
+        <li><strong>2%</strong> raffle credit rebate</li>
+        <li>Priority competition reminders</li>
+        <li>Monthly private drops digest</li>
+      </ul>
+    </article>
+    <article class="vip-card silver">
+      <div class="foil-logo">L</div>
+      <div class="vip-tier">Tier 02</div>
+      <h3 class="vip-name">Silver</h3>
+      <ul class="vip-perks">
+        <li><strong>5%</strong> ticket cashback</li>
+        <li>Early access to premium auctions</li>
+        <li>Dedicated verification lane</li>
+      </ul>
+    </article>
+    <article class="vip-card gold">
+      <div class="foil-logo">L</div>
+      <div class="vip-tier">Tier 03</div>
+      <h3 class="vip-name">Gold</h3>
+      <ul class="vip-perks">
+        <li><strong>10%</strong> bonus entries</li>
+        <li>Concierge prize fulfillment</li>
+        <li>Reduced marketplace fees</li>
+      </ul>
+    </article>
+    <article class="vip-card elite-card">
+      <div class="foil-logo">LX</div>
+      <div class="vip-tier">Elite Black Card</div>
+      <h3 class="vip-name">Obsidian Elite</h3>
+      <ul class="vip-perks">
+        <li><strong>0% Marketplace Fees</strong></li>
+        <li>Private high-roller competitions</li>
+        <li>Direct desk for six-figure assets</li>
+        <li>White-glove global delivery</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     13. REFERRAL PROGRAM
+     ============================================ -->
+<section class="referral-section">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Referral Program</div>
+      <h2 class="section-title">Affiliate growth, made visible</h2>
+    </div>
+  </div>
+  <div class="referral-layout">
+    <div class="referral-panel">
+      <div class="winner-meta">Referral tier growth</div>
+      <div class="chart-bars" aria-hidden="true">
+        <div class="chart-bar" style="height: 34%"><span>Jan</span></div>
+        <div class="chart-bar" style="height: 48%"><span>Feb</span></div>
+        <div class="chart-bar" style="height: 62%"><span>Mar</span></div>
+        <div class="chart-bar" style="height: 78%"><span>Apr</span></div>
+        <div class="chart-bar" style="height: 94%"><span>May</span></div>
+      </div>
+      <div class="referral-stats">
+        <div class="ref-stat"><strong>284</strong><span>Invites</span></div>
+        <div class="ref-stat"><strong>$18.6K</strong><span>Rewards</span></div>
+        <div class="ref-stat"><strong>Gold</strong><span>Tier</span></div>
+      </div>
+    </div>
+    <div class="copy-panel">
+      <div class="winner-meta">Your affiliate link</div>
+      <h3 class="timeline-title">Earn on every verified entry</h3>
+      <p class="timeline-copy">Share one clean link and track downstream ticket volume, qualified deposits, and tier upgrades from the same dashboard.</p>
+      <div class="copy-box">
+        <input id="referralLink" value="https://luxbid.io/r/kai-black-1729" readonly>
+        <button class="copy-link-btn" id="copyReferral">Copy Link</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     14. SECURITY
+     ============================================ -->
+<section class="security-section">
+  <div class="section-label">Security</div>
+  <h2 class="section-title">Institutional-grade protection</h2>
+  <div class="security-grid">
+    <article class="security-card">
+      <div>
+        <div class="security-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 L20 7 V12 C20 17 16.5 20 12 21 C7.5 20 4 17 4 12 V7 Z"/><path d="M8 12 L11 15 L16 9"/></svg></div>
+        <h3 class="security-title">CertiK Audited</h3>
+        <p class="security-copy">Smart-contract logic is independently reviewed before live draw settlement.</p>
+      </div>
+    </article>
+    <article class="security-card">
+      <div>
+        <div class="security-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10 V7 A4 4 0 0 1 16 7 V10"/><path d="M12 14 V17"/></svg></div>
+        <h3 class="security-title">Multi-Sig Escrow</h3>
+        <p class="security-copy">Prize custody and high-value transfers require multi-party approvals.</p>
+      </div>
+    </article>
+    <article class="security-card">
+      <div>
+        <div class="security-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5 H19 V19 H5 Z"/><path d="M8 12 H16"/><path d="M12 8 V16"/></svg></div>
+        <h3 class="security-title">GDPR Compliant</h3>
+        <p class="security-copy">Personal data flows are minimized, encrypted, and governed by strict access controls.</p>
+      </div>
+    </article>
+    <article class="security-card">
+      <div>
+        <div class="security-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8 C4 5 8 3 12 3 C16 3 20 5 20 8 V16 C20 19 16 21 12 21 C8 21 4 19 4 16 Z"/><path d="M8 9 H16"/><path d="M8 13 H16"/><path d="M8 17 H13"/></svg></div>
+        <h3 class="security-title">Hardened Servers</h3>
+        <p class="security-copy">Deep charcoal infrastructure stack with monitored access and resilient failover.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     15. TESTIMONIALS
+     ============================================ -->
+<section class="testimonials-section">
+  <div class="section-label">Testimonials</div>
+  <h2 class="section-title">Collectors, bidders, winners</h2>
+  <div class="testimonial-masonry">
+    <article class="testimonial-card">
+      <div class="stars"><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg></div>
+      <p class="testimonial-text">The live bid movement feels premium, but the best part is the proof trail. I knew exactly where my ticket sat.</p>
+      <div class="testimonial-profile"><div class="testimonial-avatar">A</div><span class="verified-dot">âœ“</span><div><div class="masked-name">@atlas***88</div><div class="winner-time">Verified winner</div></div></div>
+    </article>
+    <article class="testimonial-card">
+      <div class="stars"><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg></div>
+      <p class="testimonial-text">Won a watch raffle from a tiny entry. Escrow updates were smooth and support felt like a concierge desk, not a ticket queue.</p>
+      <div class="testimonial-profile"><div class="testimonial-avatar">N</div><span class="verified-dot">âœ“</span><div><div class="masked-name">@nova***21</div><div class="winner-time">Gold VIP</div></div></div>
+    </article>
+    <article class="testimonial-card">
+      <div class="stars"><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8 L12.6 7.1 L18.4 7.9 L14.2 12 L15.2 17.8 L10 15 L4.8 17.8 L5.8 12 L1.6 7.9 L7.4 7.1 Z"/></svg></div>
+      <p class="testimonial-text">The affiliate dashboard made referrals feel like a product, not an afterthought. Clear, fast, and easy to share.</p>
+      <div class="testimonial-profile"><div class="testimonial-avatar">S</div><span class="verified-dot">âœ“</span><div><div class="masked-name">@sable***04</div><div class="winner-time">Affiliate partner</div></div></div>
+    </article>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     16. BLOG / EDITORIAL
+     ============================================ -->
+<section class="editorial-section">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Blog / Editorial</div>
+      <h2 class="section-title">Strategy from the LuxBid desk</h2>
+    </div>
+    <a href="#" class="view-all-link">Open newsroom -></a>
+  </div>
+  <div class="editorial-grid">
+    <article class="editorial-card"><div class="editorial-cover"></div><div class="category-tag">INSIGHTS</div><div class="editorial-content"><h3 class="editorial-title">How high-odds raffles change luxury acquisition strategy</h3><a href="#" class="read-link">Read Strategy Guide <span>-></span></a></div></article>
+    <article class="editorial-card"><div class="editorial-cover"></div><div class="category-tag">MARKET</div><div class="editorial-content"><h3 class="editorial-title">Why authenticated watches keep outperforming hype cycles</h3><a href="#" class="read-link">Read Strategy Guide <span>-></span></a></div></article>
+    <article class="editorial-card"><div class="editorial-cover"></div><div class="category-tag">WEB3</div><div class="editorial-content"><h3 class="editorial-title">A collector's guide to reading on-chain draw proofs</h3><a href="#" class="read-link">Read Strategy Guide <span>-></span></a></div></article>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     17. FAQ
+     ============================================ -->
+<section class="faq-section">
+  <div class="faq-layout">
+    <div class="faq-visual-panel">
+      <div class="faq-visual-content">
+        <div class="faq-eyebrow">Member Support</div>
+        <h2 class="faq-visual-title">Need clarity before your next bid?</h2>
+        <p class="faq-visual-copy">Review the essentials around draws, delivery, wallet access, and asset checks before entering a premium auction or competition.</p>
+        <a class="faq-visual-button" href="#">Contact Concierge <span>-></span></a>
+      </div>
+    </div>
+    <div class="faq-content">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Answers before you enter</h2>
+      <div class="faq-wrap">
+        <div class="faq-item active"><button class="faq-question" type="button">How are competition winners selected?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Draws use verifiable randomness and publish a confirmation trail so entrants can audit the result after settlement. Ticket IDs, winner addresses, and verification hashes are presented in the winner flow.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button">What happens after I win a physical prize?<span class="faq-plus">+</span></button><div class="faq-answer"><p>LuxBid routes the prize through escrow, verifies identity where required, and coordinates insured delivery with concierge support for high-value items.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button">Can I use multiple crypto networks?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Yes. Supported settlement rails are designed around wallet-first access, so users can participate from approved networks while keeping verification consistent.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button">Are auction assets authenticated?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Luxury assets are reviewed before listing and paired with custody, insurance, and provenance checks appropriate to the item class.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     18. NEWSLETTER
+     ============================================ -->
+<section class="newsletter-section">
+  <div class="newsletter-card">
+    <div class="section-label" style="justify-content:center;">Alpha List</div>
+    <h2 class="newsletter-title">Get the private drop signal</h2>
+    <p class="newsletter-copy">Weekly auction intelligence, VIP raffle windows, and early access alerts for members who move before the public feed catches up.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="you@domain.com" aria-label="Email address">
+      <button type="submit">Join the Alpha List</button>
+    </form>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================
+     19. MOBILE APP PROMO
+     ============================================ -->
+<section class="app-section">
+  <div class="app-layout">
+    <div class="phone-stage" aria-hidden="true">
+      <div class="phone-mockup phone-one"><div class="phone-screen"><div class="app-top"><span>LUXBID LIVE</span><span>04:12</span></div><div class="app-bid-card"><span class="winner-meta">Current Bid</span><strong>$187,400</strong><span class="item-meta">Lamborghini Huracan EVO</span></div><div class="app-chart"></div><div class="app-bid-card"><span class="winner-meta">Ticket Heat</span><strong>88%</strong><span class="item-meta">Royal Oak raffle closing</span></div></div></div>
+      <div class="phone-mockup phone-two"><div class="phone-screen"><div class="app-top"><span>WATCHLIST</span><span>12 live</span></div><div class="app-bid-card"><span class="winner-meta">Win Probability</span><strong>14.8%</strong><span class="item-meta">4x ticket multiplier active</span></div><div class="app-chart"></div><div class="app-bid-card"><span class="winner-meta">Escrow Status</span><strong>Ready</strong><span class="item-meta">Vault verified asset</span></div></div></div>
+    </div>
+    <div>
+      <div class="section-label">Mobile App</div>
+      <h2 class="section-title">The Arena in Your Pocket</h2>
+      <p class="timeline-copy">Track live bids, receive draw alerts, verify prize settlement, and manage VIP access from a premium mobile command center.</p>
+      <div class="download-badges">
+        <a class="store-badge" href="#"><span class="store-icon">A</span><span class="store-text"><small>Download on the</small><strong>App Store</strong></span></a>
+        <a class="store-badge" href="#"><span class="store-icon">G</span><span class="store-text"><small>Get it on</small><strong>Google Play</strong></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     20. FINAL CTA
+     ============================================ -->
+<section class="final-cta">
+  <div class="particle-dust"></div>
+  <div class="final-cta-inner">
+    <h2 class="final-title">Your Next Victory Awaits.</h2>
+    <button class="final-button">Claim Free Account</button>
+  </div>
+</section>
+
+<!-- ============================================
+     21. FOOTER
+     ============================================ -->
+<footer class="corporate-footer">
+  <div class="footer-grid">
+    <div>
+      <a href="#" class="logo"><div class="logo-mark"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="19,2 36,12 36,26 19,36 2,26 2,12" fill="none" stroke="#00FFFF" stroke-width="1.5"/><polygon points="19,9 29,15 29,23 19,29 9,23 9,15" fill="#9945FF" opacity="0.35"/></svg></div><span class="logo-text">LUXBID</span></a>
+      <p class="footer-brand-copy">A premium Web3 auction and competition platform for authenticated luxury assets, transparent draws, and verified settlement.</p>
+      <div class="social-row"><a class="social-btn x" href="#">X</a><a class="social-btn discord" href="#">D</a><a class="social-btn telegram" href="#">T</a></div>
+    </div>
+    <div class="footer-col"><h4>Platform</h4><a href="#">Auctions</a><a href="#">Competitions</a><a href="#">Winners</a><a href="#">VIP Program</a></div>
+    <div class="footer-col"><h4>Resources</h4><a href="#">Strategy Guides</a><a href="#">Verification</a><a href="#">Security</a><a href="#">Referral Program</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Contact</a></div>
+    <div class="footer-col"><h4>Legal</h4><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Risk Disclosure</a><a href="#">Cookie Policy</a></div>
+  </div>
+  <div class="footer-bottom"><div>Â© 2026 LuxBid Platform. All rights reserved.</div><div class="risk-copy">Risk disclosure: Auctions, raffles, and crypto-settled competitions involve financial risk and may not be available in all jurisdictions. Participate only where permitted and only with funds you can afford to lose.</div></div>
+</footer>
+
+<div class="footer-mini" style="display:none">
+  Â© 2026 <span>LuxBid</span> Platform â€” Powered by Blockchain â€¢ All auctions are verified & insured
+</div>
+
+<script src="assets/js/luxbid-premium.js"></script>
+</body>
+</html>
+
+
