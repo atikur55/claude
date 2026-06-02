@@ -66,7 +66,11 @@
     </div>
     <span class="logo-text">LUXBID</span>
   </a>
-
+  <button class="btn btn--icon mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
   <nav class="nav">
     <a href="#" class="nav-link">Auctions</a>
     <a href="#" class="nav-link">Collections</a>
@@ -76,14 +80,23 @@
   </nav>
 
   <div class="header-right">
-    <button class="btn-connect">
+        <label class="language-switcher" aria-label="Select language">
+      <span>Language</span>
+      <select class="form-control" name="language">
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
+        <option value="de">DE</option>
+      </select>
+    </label>
+    <button class="btn btn--ghost btn-connect">
       <div class="web3-icons">
         <div class="w3-icon mm">ðŸ¦Š</div>
         <div class="w3-icon ph">ðŸ‘»</div>
       </div>
       Connect Wallet
     </button>
-    <button class="btn-profile">K</button>
+    <button class="btn btn--icon btn-profile">K</button>
   </div>
 </header>
 
@@ -100,7 +113,7 @@
 
   <div class="hero-content">
     <div class="hero-left">
-      <div class="hero-badge">
+      <div class="badge badge--pink hero-badge">
         <span class="badge-dot"></span>
         Live Platform â€” 3,247 Active Bidders
       </div>
@@ -111,8 +124,8 @@
       </h1>
       <p class="hero-sub">The world's most exclusive real-time auction platform for luxury assets â€” watches, supercars, art & rare collectibles. Zero compromise. Maximum thrill.</p>
       <div class="hero-ctas">
-        <button class="btn-primary">ðŸ”¥ Start Bidding</button>
-        <button class="btn-secondary">â†’ Explore Auctions</button>
+        <button class="btn btn--primary btn-primary">ðŸ”¥ Start Bidding</button>
+        <button class="btn btn--secondary btn-secondary">â†’ Explore Auctions</button>
       </div>
     </div>
 
@@ -348,7 +361,7 @@
     <div class="auction-card card-1">
       <div class="card-image-wrap">
         <div class="card-img-placeholder">ðŸŽï¸</div>
-        <div class="live-badge"><div class="live-dot"></div><span class="live-text">LIVE</span></div>
+        <div class="badge badge--pink live-badge"><div class="live-dot"></div><span class="live-text">LIVE</span></div>
         <div class="card-category">Supercar</div>
       </div>
       <div class="card-body">
@@ -365,8 +378,8 @@
           </div>
         </div>
         <div class="card-footer">
-          <button class="btn-bid">Place Bid</button>
-          <button class="btn-watch">â™¡</button>
+          <button class="btn btn--primary btn-bid">Place Bid</button>
+          <button class="btn btn--icon btn-watch">â™¡</button>
         </div>
       </div>
     </div>
@@ -375,7 +388,7 @@
     <div class="auction-card card-2">
       <div class="card-image-wrap">
         <div class="card-img-placeholder">âŒš</div>
-        <div class="live-badge"><div class="live-dot"></div><span class="live-text">LIVE</span></div>
+        <div class="badge badge--pink live-badge"><div class="live-dot"></div><span class="live-text">LIVE</span></div>
         <div class="card-category">Horology</div>
       </div>
       <div class="card-body">
@@ -392,8 +405,8 @@
           </div>
         </div>
         <div class="card-footer">
-          <button class="btn-bid">Place Bid</button>
-          <button class="btn-watch">â™¡</button>
+          <button class="btn btn--primary btn-bid">Place Bid</button>
+          <button class="btn btn--icon btn-watch">â™¡</button>
         </div>
       </div>
     </div>
@@ -402,7 +415,7 @@
     <div class="auction-card card-3">
       <div class="card-image-wrap">
         <div class="card-img-placeholder">ðŸŽ¨</div>
-        <div class="live-badge"><div class="live-dot"></div><span class="live-text">LIVE</span></div>
+        <div class="badge badge--pink live-badge"><div class="live-dot"></div><span class="live-text">LIVE</span></div>
         <div class="card-category">Fine Art</div>
       </div>
       <div class="card-body">
@@ -419,8 +432,8 @@
           </div>
         </div>
         <div class="card-footer">
-          <button class="btn-bid">Place Bid</button>
-          <button class="btn-watch">â™¡</button>
+          <button class="btn btn--primary btn-bid">Place Bid</button>
+          <button class="btn btn--icon btn-watch">â™¡</button>
         </div>
       </div>
     </div>
@@ -452,8 +465,8 @@
           <div class="ticket-row"><span class="ticket-meta">3,824 / 5,000 tickets</span><span class="ticket-meta">76%</span></div>
         </div>
         <div class="ticket-actions">
-          <div class="ticket-stepper" data-ticket-stepper><button type="button" data-ticket-minus>-</button><span class="ticket-count">2x</span><button type="button" data-ticket-plus>+</button></div>
-          <button class="btn-ticket">Buy Tickets</button>
+          <div class="ticket-stepper" data-ticket-stepper><button class="btn btn--icon" type="button" data-ticket-minus>-</button><span class="ticket-count">2x</span><button class="btn btn--icon" type="button" data-ticket-plus>+</button></div>
+          <button class="btn btn--primary btn-ticket">Buy Tickets</button>
         </div>
       </div>
     </article>
@@ -467,8 +480,8 @@
           <div class="ticket-row"><span class="ticket-meta">1,584 / 1,800 tickets</span><span class="ticket-meta">88%</span></div>
         </div>
         <div class="ticket-actions">
-          <div class="ticket-stepper" data-ticket-stepper><button type="button" data-ticket-minus>-</button><span class="ticket-count">4x</span><button type="button" data-ticket-plus>+</button></div>
-          <button class="btn-ticket">Buy Tickets</button>
+          <div class="ticket-stepper" data-ticket-stepper><button class="btn btn--icon" type="button" data-ticket-minus>-</button><span class="ticket-count">4x</span><button class="btn btn--icon" type="button" data-ticket-plus>+</button></div>
+          <button class="btn btn--primary btn-ticket">Buy Tickets</button>
         </div>
       </div>
     </article>
@@ -482,8 +495,8 @@
           <div class="ticket-row"><span class="ticket-meta">2,520 / 4,000 tickets</span><span class="ticket-meta">63%</span></div>
         </div>
         <div class="ticket-actions">
-          <div class="ticket-stepper" data-ticket-stepper><button type="button" data-ticket-minus>-</button><span class="ticket-count">1x</span><button type="button" data-ticket-plus>+</button></div>
-          <button class="btn-ticket">Buy Tickets</button>
+          <div class="ticket-stepper" data-ticket-stepper><button class="btn btn--icon" type="button" data-ticket-minus>-</button><span class="ticket-count">1x</span><button class="btn btn--icon" type="button" data-ticket-plus>+</button></div>
+          <button class="btn btn--primary btn-ticket">Buy Tickets</button>
         </div>
       </div>
     </article>
@@ -633,20 +646,20 @@
     <div class="winner-row">
       <div class="winner-user"><div class="winner-avatar">K</div><div><div class="masked-name">@kai***17</div><div class="winner-time">18 seconds ago</div></div></div>
       <div class="winner-item"><div class="winner-thumb">âŒš</div><div><div class="item-name">Rolex Daytona Panda</div><div class="item-meta">Ticket #88421</div></div></div>
-      <div class="win-value-badge">Spent $5 to win $42,000</div>
-      <div class="escrow-badge">Dispatched via Escrow</div>
+      <div class="badge badge--green win-value-badge">Spent $5 to win $42,000</div>
+      <div class="badge badge--cyan escrow-badge">Dispatched via Escrow</div>
     </div>
     <div class="winner-row">
       <div class="winner-user"><div class="winner-avatar">M</div><div><div class="masked-name">@maya***09</div><div class="winner-time">2 minutes ago</div></div></div>
       <div class="winner-item"><div class="winner-thumb">ðŸ’Ž</div><div><div class="item-name">Diamond Vault Box</div><div class="item-meta">Ticket #77208</div></div></div>
-      <div class="win-value-badge">Spent $12 to win $9,800</div>
-      <div class="escrow-badge">Dispatched via Escrow</div>
+      <div class="badge badge--green win-value-badge">Spent $12 to win $9,800</div>
+      <div class="badge badge--cyan escrow-badge">Dispatched via Escrow</div>
     </div>
     <div class="winner-row">
       <div class="winner-user"><div class="winner-avatar">R</div><div><div class="masked-name">@ryan***44</div><div class="winner-time">5 minutes ago</div></div></div>
       <div class="winner-item"><div class="winner-thumb">ðŸŽï¸</div><div><div class="item-name">Track Day Supercar Pass</div><div class="item-meta">Ticket #60114</div></div></div>
-      <div class="win-value-badge">Spent $5 to win $2,000</div>
-      <div class="escrow-badge">Dispatched via Escrow</div>
+      <div class="badge badge--green win-value-badge">Spent $5 to win $2,000</div>
+      <div class="badge badge--cyan escrow-badge">Dispatched via Escrow</div>
     </div>
   </div>
 </section>
@@ -737,8 +750,8 @@
       <h3 class="timeline-title">Earn on every verified entry</h3>
       <p class="timeline-copy">Share one clean link and track downstream ticket volume, qualified deposits, and tier upgrades from the same dashboard.</p>
       <div class="copy-box">
-        <input id="referralLink" value="https://luxbid.io/r/kai-black-1729" readonly>
-        <button class="copy-link-btn" id="copyReferral">Copy Link</button>
+        <input class="form-control" id="referralLink" value="https://luxbid.io/r/kai-black-1729" readonly>
+        <button class="btn btn--outline copy-link-btn" id="copyReferral">Copy Link</button>
       </div>
     </div>
   </div>
@@ -825,9 +838,9 @@
     <a href="#" class="view-all-link">Open newsroom -></a>
   </div>
   <div class="editorial-grid">
-    <article class="editorial-card"><div class="editorial-cover"></div><div class="category-tag">INSIGHTS</div><div class="editorial-content"><h3 class="editorial-title">How high-odds raffles change luxury acquisition strategy</h3><a href="#" class="read-link">Read Strategy Guide <span>-></span></a></div></article>
-    <article class="editorial-card"><div class="editorial-cover"></div><div class="category-tag">MARKET</div><div class="editorial-content"><h3 class="editorial-title">Why authenticated watches keep outperforming hype cycles</h3><a href="#" class="read-link">Read Strategy Guide <span>-></span></a></div></article>
-    <article class="editorial-card"><div class="editorial-cover"></div><div class="category-tag">WEB3</div><div class="editorial-content"><h3 class="editorial-title">A collector's guide to reading on-chain draw proofs</h3><a href="#" class="read-link">Read Strategy Guide <span>-></span></a></div></article>
+    <article class="editorial-card"><div class="editorial-cover"></div><div class="badge badge--cyan category-tag">INSIGHTS</div><div class="editorial-content"><h3 class="editorial-title">How high-odds raffles change luxury acquisition strategy</h3><a href="#" class="read-link">Read Strategy Guide <span>-></span></a></div></article>
+    <article class="editorial-card"><div class="editorial-cover"></div><div class="badge badge--cyan category-tag">MARKET</div><div class="editorial-content"><h3 class="editorial-title">Why authenticated watches keep outperforming hype cycles</h3><a href="#" class="read-link">Read Strategy Guide <span>-></span></a></div></article>
+    <article class="editorial-card"><div class="editorial-cover"></div><div class="badge badge--cyan category-tag">WEB3</div><div class="editorial-content"><h3 class="editorial-title">A collector's guide to reading on-chain draw proofs</h3><a href="#" class="read-link">Read Strategy Guide <span>-></span></a></div></article>
   </div>
 </section>
 
@@ -843,17 +856,17 @@
         <div class="faq-eyebrow">Member Support</div>
         <h2 class="faq-visual-title">Need clarity before your next bid?</h2>
         <p class="faq-visual-copy">Review the essentials around draws, delivery, wallet access, and asset checks before entering a premium auction or competition.</p>
-        <a class="faq-visual-button" href="#">Contact Concierge <span>-></span></a>
+        <a class="btn btn--ghost faq-visual-button" href="#">Contact Concierge <span>-></span></a>
       </div>
     </div>
     <div class="faq-content">
       <div class="section-label">FAQ</div>
       <h2 class="section-title">Answers before you enter</h2>
       <div class="faq-wrap">
-        <div class="faq-item active"><button class="faq-question" type="button">How are competition winners selected?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Draws use verifiable randomness and publish a confirmation trail so entrants can audit the result after settlement. Ticket IDs, winner addresses, and verification hashes are presented in the winner flow.</p></div></div>
-        <div class="faq-item"><button class="faq-question" type="button">What happens after I win a physical prize?<span class="faq-plus">+</span></button><div class="faq-answer"><p>LuxBid routes the prize through escrow, verifies identity where required, and coordinates insured delivery with concierge support for high-value items.</p></div></div>
-        <div class="faq-item"><button class="faq-question" type="button">Can I use multiple crypto networks?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Yes. Supported settlement rails are designed around wallet-first access, so users can participate from approved networks while keeping verification consistent.</p></div></div>
-        <div class="faq-item"><button class="faq-question" type="button">Are auction assets authenticated?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Luxury assets are reviewed before listing and paired with custody, insurance, and provenance checks appropriate to the item class.</p></div></div>
+        <div class="faq-item active"><button class="btn btn--ghost faq-question" type="button">How are competition winners selected?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Draws use verifiable randomness and publish a confirmation trail so entrants can audit the result after settlement. Ticket IDs, winner addresses, and verification hashes are presented in the winner flow.</p></div></div>
+        <div class="faq-item"><button class="btn btn--ghost faq-question" type="button">What happens after I win a physical prize?<span class="faq-plus">+</span></button><div class="faq-answer"><p>LuxBid routes the prize through escrow, verifies identity where required, and coordinates insured delivery with concierge support for high-value items.</p></div></div>
+        <div class="faq-item"><button class="btn btn--ghost faq-question" type="button">Can I use multiple crypto networks?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Yes. Supported settlement rails are designed around wallet-first access, so users can participate from approved networks while keeping verification consistent.</p></div></div>
+        <div class="faq-item"><button class="btn btn--ghost faq-question" type="button">Are auction assets authenticated?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Luxury assets are reviewed before listing and paired with custody, insurance, and provenance checks appropriate to the item class.</p></div></div>
       </div>
     </div>
   </div>
@@ -870,8 +883,8 @@
     <h2 class="newsletter-title">Get the private drop signal</h2>
     <p class="newsletter-copy">Weekly auction intelligence, VIP raffle windows, and early access alerts for members who move before the public feed catches up.</p>
     <form class="newsletter-form">
-      <input type="email" placeholder="you@domain.com" aria-label="Email address">
-      <button type="submit">Join the Alpha List</button>
+      <input class="form-control" type="email" placeholder="you@domain.com" aria-label="Email address">
+      <button class="btn btn--submit" type="submit">Join the Alpha List</button>
     </form>
   </div>
 </section>
@@ -892,8 +905,8 @@
       <h2 class="section-title">The Arena in Your Pocket</h2>
       <p class="timeline-copy">Track live bids, receive draw alerts, verify prize settlement, and manage VIP access from a premium mobile command center.</p>
       <div class="download-badges">
-        <a class="store-badge" href="#"><span class="store-icon">A</span><span class="store-text"><small>Download on the</small><strong>App Store</strong></span></a>
-        <a class="store-badge" href="#"><span class="store-icon">G</span><span class="store-text"><small>Get it on</small><strong>Google Play</strong></span></a>
+        <a class="badge badge--cyan store-badge" href="#"><span class="store-icon">A</span><span class="store-text"><small>Download on the</small><strong>App Store</strong></span></a>
+        <a class="badge badge--cyan store-badge" href="#"><span class="store-icon">G</span><span class="store-text"><small>Get it on</small><strong>Google Play</strong></span></a>
       </div>
     </div>
   </div>
@@ -906,7 +919,7 @@
   <div class="particle-dust"></div>
   <div class="final-cta-inner">
     <h2 class="final-title">Your Next Victory Awaits.</h2>
-    <button class="final-button">Claim Free Account</button>
+    <button class="btn btn--primary final-button">Claim Free Account</button>
   </div>
 </section>
 
@@ -932,8 +945,14 @@
   Â© 2026 <span>LuxBid</span> Platform â€” Powered by Blockchain â€¢ All auctions are verified & insured
 </div>
 
+<script src="assets/js/main.js"></script>
 <script src="assets/js/luxbid-premium.js"></script>
 </body>
 </html>
+
+
+
+
+
 
 

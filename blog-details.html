@@ -10,6 +10,10 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body class="blog-detail-body">
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 <!-- ============================================
      1. ANNOUNCEMENT BAR
      ============================================ -->
@@ -61,7 +65,11 @@
     </div>
     <span class="logo-text">LUXBID</span>
   </a>
-
+  <button class="btn btn--icon mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
   <nav class="nav">
     <a href="#" class="nav-link">Auctions</a>
     <a href="#" class="nav-link">Collections</a>
@@ -71,14 +79,23 @@
   </nav>
 
   <div class="header-right">
-    <button class="btn-connect">
+        <label class="language-switcher" aria-label="Select language">
+      <span>Language</span>
+      <select class="form-control" name="language">
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
+        <option value="de">DE</option>
+      </select>
+    </label>
+    <button class="btn btn--ghost btn-connect">
       <div class="web3-icons">
         <div class="w3-icon mm">ðŸ¦Š</div>
         <div class="w3-icon ph">ðŸ‘»</div>
       </div>
       Connect Wallet
     </button>
-    <button class="btn-profile">K</button>
+    <button class="btn btn--icon btn-profile">K</button>
   </div>
 </header>
 
@@ -107,7 +124,7 @@
           <a href="#" aria-label="Share on X">X</a>
           <a href="#" aria-label="Share on LinkedIn">IN</a>
           <a href="#" aria-label="Copy article link">URL</a>
-          <button type="button" aria-label="Save article">Save</button>
+          <button class="btn btn--ghost" type="button" aria-label="Save article">Save</button>
         </div>
 
         <p>For collectors, this shift changes the experience from browsing inventory to participating in a live, data-rich market. Every bid, ticket, and asset claim can become part of a verifiable trail that reduces uncertainty while preserving the thrill of competition.</p>
@@ -217,6 +234,12 @@
   </div>
   <div class="footer-bottom"><div>Â© 2026 LuxBid Platform. All rights reserved.</div><div class="risk-copy">Risk disclosure: Auctions, raffles, and crypto-settled competitions involve financial risk and may not be available in all jurisdictions. Participate only where permitted and only with funds you can afford to lose.</div></div>
 </footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
 

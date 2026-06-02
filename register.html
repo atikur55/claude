@@ -10,6 +10,10 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body class="register-body">
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 <!-- ============================================
      1. ANNOUNCEMENT BAR
      ============================================ -->
@@ -61,7 +65,11 @@
     </div>
     <span class="logo-text">LUXBID</span>
   </a>
-
+  <button class="btn btn--icon mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
   <nav class="nav">
     <a href="#" class="nav-link">Auctions</a>
     <a href="#" class="nav-link">Collections</a>
@@ -71,14 +79,23 @@
   </nav>
 
   <div class="header-right">
-    <button class="btn-connect">
+        <label class="language-switcher" aria-label="Select language">
+      <span>Language</span>
+      <select class="form-control" name="language">
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
+        <option value="de">DE</option>
+      </select>
+    </label>
+    <button class="btn btn--ghost btn-connect">
       <div class="web3-icons">
         <div class="w3-icon mm">ðŸ¦Š</div>
         <div class="w3-icon ph">ðŸ‘»</div>
       </div>
       Connect Wallet
     </button>
-    <button class="btn-profile">K</button>
+    <button class="btn btn--icon btn-profile">K</button>
   </div>
 </header>
 
@@ -90,7 +107,7 @@
         <span></span>
         <span></span>
       </div>
-      <p class="register-badge">Verified Access Layer</p>
+      <p class="badge badge--green register-badge">Verified Access Layer</p>
       <h1 id="register-title">Join the Next Generation Marketplace.</h1>
       <p class="register-feature-copy">Create your LuxBid profile to enter premium auctions, track prize flows, and unlock member-only competition drops.</p>
     </div>
@@ -104,30 +121,30 @@
 
       <form class="register-form" action="#" method="post">
         <div class="register-name-grid">
-          <label class="register-field">
+          <label class="form-field register-field">
             <span>First Name</span>
-            <input type="text" name="first-name" placeholder="Kai" autocomplete="given-name" required />
+            <input class="form-control" type="text" name="first-name" placeholder="Kai" autocomplete="given-name" required />
           </label>
 
-          <label class="register-field">
+          <label class="form-field register-field">
             <span>Last Name</span>
-            <input type="text" name="last-name" placeholder="Morgan" autocomplete="family-name" required />
+            <input class="form-control" type="text" name="last-name" placeholder="Morgan" autocomplete="family-name" required />
           </label>
         </div>
 
-        <label class="register-field">
+        <label class="form-field register-field">
           <span>Username</span>
-          <input type="text" name="username" placeholder="@luxcollector" autocomplete="username" required />
+          <input class="form-control" type="text" name="username" placeholder="@luxcollector" autocomplete="username" required />
         </label>
 
-        <label class="register-field">
+        <label class="form-field register-field">
           <span>Email</span>
-          <input type="email" name="email" placeholder="you@domain.com" autocomplete="email" required />
+          <input class="form-control" type="email" name="email" placeholder="you@domain.com" autocomplete="email" required />
         </label>
 
-        <label class="register-field">
+        <label class="form-field register-field">
           <span>Password</span>
-          <input type="password" name="password" placeholder="Create secure password" autocomplete="new-password" required />
+          <input class="form-control" type="password" name="password" placeholder="Create secure password" autocomplete="new-password" required />
         </label>
 
         <div class="password-meter" aria-label="Password strength indicator">
@@ -136,7 +153,7 @@
           <span class="meter-text">Strength: initialize secure phrase</span>
         </div>
 
-        <button class="register-submit" type="submit">Create Account</button>
+        <button class="btn btn--submit register-submit" type="submit">Create Account</button>
       </form>
 
       <p class="register-login">Already registered? <a href="login.html">Login</a></p>
@@ -161,6 +178,12 @@
   </div>
   <div class="footer-bottom"><div>Â© 2026 LuxBid Platform. All rights reserved.</div><div class="risk-copy">Risk disclosure: Auctions, raffles, and crypto-settled competitions involve financial risk and may not be available in all jurisdictions. Participate only where permitted and only with funds you can afford to lose.</div></div>
 </footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
 
